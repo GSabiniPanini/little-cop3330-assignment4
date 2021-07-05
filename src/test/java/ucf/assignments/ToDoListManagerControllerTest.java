@@ -63,7 +63,11 @@ class ToDoListManagerControllerTest {
 
     @Test
     void can_edit_list_item_due_date() {
-
+        //initialize ToDoListModel
+        //populate ToDoListGroup with one ToDoList
+        //populate ToDoList with one ToDoListItem
+        //call updateDate using expected String
+        //assert ToDoListItem has expected String as date
     }
 
     @Test
