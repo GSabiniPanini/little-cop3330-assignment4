@@ -72,7 +72,11 @@ class ToDoListManagerControllerTest {
 
     @Test
     void can_mark_list_item_complete() {
-
+        //initialize ToDoListModel
+        //populate ToDoListGroup with one ToDoList
+        //populate ToDoList with one ToDoListItem
+        //call toggleComplete on ToDoListItem
+        //assert ToDoListItem.complete is true
     }
 
     @Test

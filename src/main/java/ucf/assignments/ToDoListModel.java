@@ -84,6 +84,17 @@ public class ToDoListModel {
         //call ToDoList.editItem using l, li, s1, and s2
     }
 
+    public void completeToggle() {
+        //check to see if a ToDoListItem is selected
+            //call completeTogglePass using selected ToDoList and ToDoListItem
+            //call updateViews
+        //if not do nothing
+    }
+
+    private void completeTogglePass(ToDoList l, ToDoListItem li) {
+        //call ToDoList.ToDoListItem.toggleComplete using l and li
+    }
+
     private void updateTable(ToDoList l) {
         //set toDoListView to l
     }

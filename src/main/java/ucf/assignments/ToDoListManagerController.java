@@ -76,6 +76,11 @@ public class ToDoListManagerController {
     }
 
     @FXML
+    void markCompleteButtonClicked(ActionEvent event) {
+        //call completeToggle
+    }
+
+    @FXML
     void showAllFilterClicked(ActionEvent event) {
 
     }

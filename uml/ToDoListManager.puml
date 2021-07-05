@@ -18,15 +18,17 @@ class ToDoListManagerController {
     - addItemButtonClicked(): void
     - removeItemButtonClicked(): void
     - editItemButtonClicked(): void
+    - markCompleteButtonClicked(): void
 
     - showAllFilterClicked(): void
     - showDoneFilterClicked(): void
     - showNotDoneFilterClicked(): void
 
-    - menuLoadCollectionClicked(): void
-    - menuLoadListClicked(): void
-    - menuSaveAllClicked(): void
     - menuSaveListClicked(): void
+    - menuSaveAllClicked(): void
+    - menuLoadListClicked(): void
+    - menuLoadCollectionClicked(): void
+    - sortButtonClicked(): void
 }
 
 class ToDoListModel {
@@ -45,7 +47,8 @@ class ToDoListModel {
     - removeItemFromList(ToDoList, ToDoListItem): void
     + editItem(): void
     - editItemValues(ToDoList, ToDoListItem, String, String): void
-    + sort(): void
+    + completeToggle(): void
+    - completeTogglePass(ToDoList, ToDoListItem): void
 
     + updateViews(): void
     - updateTable(ToDoList): void

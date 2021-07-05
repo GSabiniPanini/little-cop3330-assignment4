@@ -33,5 +33,11 @@ public class ToDoListItem {
         //set date to s1
     }
 
+    public void toggleComplete() {
+        //if(complete)
+            //set complete to false
+        //else set complete to true
+    }
+
 
 }
