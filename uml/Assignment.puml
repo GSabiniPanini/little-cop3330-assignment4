@@ -1,0 +1,54 @@
+@startuml
+'https://plantuml.com/class-diagram'
+
+class ToDoListManager {
+    main()
+    start()
+}
+
+class ToDoListManagerController {
+    model: ToDoListModel
+}
+
+class ToDoListModel {
+    collections: Collection<ToDoListCollection>
+
+    + addItem(ToDoListCollection, String, String): void
+    + removeItem(ToDoListCollection, ToDoList): void
+    + editItem(ToDoList): void
+    + sort(ToDoListCollection): void
+}
+
+class ToDoListCollection {
+    - title: String
+    - lists: Collection<ToDoList>
+
+    - addItem(ToDoListCollection, String, String): void
+    - removeItem(ToDoListCollection, ToDoList): void
+    - editItem(ToDoList): void
+    - sort(ToDoListCollection): void
+    - toString(): String
+}
+
+class ToDoList {
+    - date: String
+    - description: String
+    - complete: boolean
+
+    <<constructor>> ToDoList (String, String)
+
+    - updateDate(String): void
+    - updateDescription(String): void
+    - toggleComplete(): void
+    - getDescription(): String
+    - getDate(): String
+    - toString(): String
+}
+
+javafx.Application <|-- ToDoListManager
+ToDoListManager -- ToDoListManagerController
+ToDoListManagerController *--> ToDoListModel
+ToDoListModel *-> ToDoListCollection
+ToDoListCollection *-> ToDoList
+
+@enduml
