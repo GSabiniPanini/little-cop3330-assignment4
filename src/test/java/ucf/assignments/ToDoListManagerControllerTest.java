@@ -45,6 +45,11 @@ class ToDoListManagerControllerTest {
 
     @Test
     void can_remove_list_item() {
+        //initialize ToDoListModel
+        //populate toDoListGroup with one ToDoList
+        //populate ToDoList with some number of ToDoListItem
+        //call removeItemFromList using created ToDoList and expected ToDoListItem
+        //assert ToDoList no longer has expected ToDoListItem
     }
 
     @Test
