@@ -41,7 +41,8 @@ class ToDoListModel {
 
     + addItem(): void
     - addItemToList(ToDoList, String, String): void
-    + removeItem(ToDoList, ToDoListItem): void
+    + removeItem(): void
+    - removeItemFromList(ToDoList, ToDoListItem): void
     + editItem(ToDoListItem): void
     + sort(): void
 
@@ -70,7 +71,7 @@ class ToDoList {
     + setTitle(String): void
 
     + addItem(String, String): void
-    + removeItem(ToDoListCollection, ToDoList): void
+    + removeItem(ToDoListItem): void
     + editItem(ToDoList): void
 
     + sortItemList(ToDoListCollection): void

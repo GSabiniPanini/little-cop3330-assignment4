@@ -31,4 +31,8 @@ public class ToDoList {
         //add new ToDoListItem object to list using s1 and s2
     }
 
+    public void removeItem(ToDoListItem li) {
+        //remove li from ToDoList
+    }
+
 }

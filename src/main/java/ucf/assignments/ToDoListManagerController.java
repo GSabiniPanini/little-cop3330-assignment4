@@ -61,17 +61,17 @@ public class ToDoListManagerController {
     }
 
     @FXML
-    void editItemButtonClicked(ActionEvent event) {
-
-    }
-
-    @FXML
     void addItemButtonClicked(ActionEvent event) {
-
+        //call addItem
     }
 
     @FXML
     void removeItemButtonClicked(ActionEvent event) {
+        //call removeItem
+    }
+
+    @FXML
+    void editItemButtonClicked(ActionEvent event) {
 
     }
 

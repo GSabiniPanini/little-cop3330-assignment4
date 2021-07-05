@@ -61,6 +61,17 @@ public class ToDoListModel {
         //call ToDoList.addItem using l, s1, and s2
     }
 
+    public void removeItem() {
+        //check to see if a ToDoListItem is selected
+            //call removeItemFromList with selected ToDoList and ToDoListItem
+            //call updateViews
+        //if not do nothing
+    }
+
+    private void removeItemFromList(ToDoList l, ToDoListItem li) {
+        //call ToDoList.removeItem using l and li
+    }
+
     private void updateTable(ToDoList l) {
         //set toDoListView to l
     }
