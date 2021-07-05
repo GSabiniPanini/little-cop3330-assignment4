@@ -8,14 +8,37 @@ class ToDoListManager {
 
 class ToDoListManagerController {
     model: ToDoListModel
+    toDoListView: ListView<ToDoList>
+    listTreeTable: TreeTableView<ToDoListItem>
+
+    - addListButtonClicked(): void
+    - removeListButtonClicked(): void
+    - renameListButtonClicked(): void
+
+    - editItemButtonClicked(): void
+    - addItemButtonClicked(): void
+    - removeItemButtonClicked(): void
+
+    - showAllFilterClicked(): void
+    - showDoneFilterClicked(): void
+    - showNotDoneFilterClicked(): void
+
+    - menuLoadCollectionClicked(): void
+    - menuLoadListClicked(): void
+    - menuSaveAllClicked(): void
+    - menuSaveListClicked(): void
 }
 
 class ToDoListModel {
     toDoListGroup : Collection<ToDoList>
 
+    + addList
+
     + addItem(ToDoList, String, String): void
     + removeItem(ToDoList, ToDoListItem): void
     + editItem(ToDoListItem): void
+
+    + updateViews(): void
 
     + save(): void
     + saveAll(Collection<ToDoList>): void
@@ -29,7 +52,7 @@ class ToDoListModel {
 }
 
 class ToDoList {
-    - title: String
+    - title: SimpleStringProperty
     - list: Collection<ToDoListItem>
 
     - addItem(ToDoListCollection, String, String): void
@@ -42,22 +65,22 @@ class ToDoList {
 }
 
 class ToDoListItem {
-    - date: String
-    - description: String
+    - date: LocalDate
+    - description: SimpleStringProperty
     - complete: boolean
 
     <<constructor>> ToDoListItem (String, String)
 
-    - updateDate(String): void
-    - updateDescription(String): void
-    - toggleComplete(): void
-    - getDescription(): String
-    - getDate(): String
-    - toString(): String
+    + updateDate(String): void
+    + updateDescription(String): void
+    + toggleComplete(): void
+    + getDescription(): String
+    + getDate(): String
+    + toString(): String
 }
 
 javafx.Application <|-- ToDoListManager
-ToDoListManager -- ToDoListManagerController
+ToDoListManager - ToDoListManagerController
 ToDoListManagerController *--> ToDoListModel
 ToDoListModel *-> ToDoList
 ToDoList *-> ToDoListItem

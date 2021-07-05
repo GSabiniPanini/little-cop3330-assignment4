@@ -16,34 +16,39 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<BorderPane fx:id="BorderPane" maxHeight="800.0" maxWidth="700.0" minHeight="180.0" minWidth="490.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ucf.assignments.ToDoListManagerController">
+<!--
+  ~ UCF COP3330 Summer 2021 Assignment 4 Solution
+  ~ Copyright 2021 Glenroy Little
+  -->
+
+<BorderPane fx:id="borderPane" maxHeight="800.0" maxWidth="700.0" minHeight="180.0" minWidth="490.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ucf.assignments.ToDoListManagerController">
     <top>
         <MenuBar>
             <menus>
-                <Menu fx:id="FileMenu" mnemonicParsing="false" text="File">
+                <Menu fx:id="fileMenu" mnemonicParsing="false" text="File">
                     <items>
-                        <MenuItem fx:id="FileSaveList" mnemonicParsing="false" onAction="#menuSaveListClicked" text="Save List" />
-                        <MenuItem fx:id="FileSaveAll" mnemonicParsing="false" onAction="#menuSaveAllClicked" text="Save All to Collection" />
-                        <MenuItem fx:id="FileLoadList" mnemonicParsing="false" onAction="#menuLoadListClicked" text="Load List" />
-                        <MenuItem fx:id="FileLoadCollection" mnemonicParsing="false" onAction="#menuLoadCollectionClicked" text="Load List Collection" />
+                        <MenuItem mnemonicParsing="false" onAction="#menuSaveListClicked" text="Save List" />
+                        <MenuItem mnemonicParsing="false" onAction="#menuSaveAllClicked" text="Save All to Collection" />
+                        <MenuItem mnemonicParsing="false" onAction="#menuLoadListClicked" text="Load List" />
+                        <MenuItem mnemonicParsing="false" onAction="#menuLoadCollectionClicked" text="Load List Collection" />
                     </items>
                 </Menu>
-                <Menu fx:id="FilterMenu" mnemonicParsing="false" text="Filter">
+                <Menu fx:id="filterMenu" mnemonicParsing="false" text="Filter">
                     <items>
-                        <RadioMenuItem fx:id="ShowAllFilter" mnemonicParsing="false" onAction="#ShowAllFilterClicked" text="Show All">
+                        <RadioMenuItem fx:id="showAllFilter" mnemonicParsing="false" onAction="#showAllFilterClicked" text="Show All">
                             <toggleGroup>
-                                <ToggleGroup fx:id="FilterToggleGroup" />
+                                <ToggleGroup fx:id="filterToggleGroup" />
                             </toggleGroup>
                         </RadioMenuItem>
-                        <RadioMenuItem fx:id="ShowDoneFilter" mnemonicParsing="false" onAction="#ShowDoneFilterClicked" text="Only Show Done" toggleGroup="$FilterToggleGroup" />
-                        <RadioMenuItem fx:id="ShowNotDoneFilter" mnemonicParsing="false" onAction="#ShowNotDoneFilterClicked" text="Only Show Incomplete" toggleGroup="$FilterToggleGroup" />
+                        <RadioMenuItem fx:id="showDoneFilter" mnemonicParsing="false" onAction="#showDoneFilterClicked" text="Only Show Done" toggleGroup="$filterToggleGroup" />
+                        <RadioMenuItem fx:id="showNotDoneFilter" mnemonicParsing="false" onAction="#showNotDoneFilterClicked" text="Only Show Incomplete" toggleGroup="$filterToggleGroup" />
                     </items>
                 </Menu>
             </menus>
         </MenuBar>
     </top>
     <left>
-        <GridPane fx:id="LeftGridPane" maxHeight="400.0" maxWidth="280.0" minHeight="200.0" minWidth="250.0" vgap="5.0" BorderPane.alignment="CENTER">
+        <GridPane fx:id="leftGridPane" maxHeight="400.0" maxWidth="280.0" minHeight="200.0" minWidth="250.0" vgap="5.0" BorderPane.alignment="CENTER">
             <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -54,16 +59,16 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             </rowConstraints>
             <children>
-                <ListView fx:id="ToDoListView" minHeight="30.0" minWidth="159.0" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="1" GridPane.rowSpan="2147483647" GridPane.valignment="TOP" GridPane.vgrow="SOMETIMES" />
-                <HBox fx:id="ListsHBox" alignment="BOTTOM_RIGHT" fillHeight="false" prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.columnSpan="2147483647">
+                <ListView fx:id="toDoListView" minHeight="30.0" minWidth="159.0" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="1" GridPane.rowSpan="2147483647" GridPane.valignment="TOP" GridPane.vgrow="SOMETIMES" />
+                <HBox alignment="BOTTOM_RIGHT" fillHeight="false" prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.columnSpan="2147483647">
                     <children>
-                        <Button fx:id="AddListButton" mnemonicParsing="false" onAction="#AddListButtonClicked" prefHeight="25.0" prefWidth="60.0" text="Add List" textAlignment="CENTER" HBox.hgrow="NEVER">
+                        <Button mnemonicParsing="false" onAction="#addListButtonClicked" prefHeight="25.0" prefWidth="60.0" text="Add List" textAlignment="CENTER" HBox.hgrow="NEVER">
                             <opaqueInsets>
                                 <Insets />
                             </opaqueInsets>
                         </Button>
-                        <Button fx:id="RemoveListButton" mnemonicParsing="false" onAction="#RemoveListButtonClicked" prefHeight="25.0" prefWidth="80.0" text="Remove List" HBox.hgrow="NEVER" />
-                        <Button fx:id="RenameListButton" mnemonicParsing="false" onAction="#RenameListButtonClicked" prefHeight="25.0" prefWidth="80.0" text="Rename List" textAlignment="CENTER" HBox.hgrow="NEVER">
+                        <Button mnemonicParsing="false" onAction="#removeListButtonClicked" prefHeight="25.0" prefWidth="80.0" text="Remove List" HBox.hgrow="NEVER" />
+                        <Button mnemonicParsing="false" onAction="#renameListButtonClicked" prefHeight="25.0" prefWidth="80.0" text="Rename List" textAlignment="CENTER" HBox.hgrow="NEVER">
                             <opaqueInsets>
                                 <Insets />
                             </opaqueInsets>
@@ -77,7 +82,7 @@
         </GridPane>
     </left>
     <right>
-        <GridPane fx:id="RightGridPane" maxHeight="400.0" maxWidth="280.0" minHeight="200.0" minWidth="250.0" vgap="5.0" BorderPane.alignment="CENTER">
+        <GridPane fx:id="rightGridPane" maxHeight="400.0" maxWidth="280.0" minHeight="200.0" minWidth="250.0" vgap="5.0" BorderPane.alignment="CENTER">
             <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -88,25 +93,25 @@
                 <RowConstraints fillHeight="false" minHeight="10.0" prefHeight="30.0" valignment="TOP" vgrow="NEVER" />
             </rowConstraints>
             <children>
-                <HBox fx:id="RightTopHBox" alignment="BOTTOM_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.columnSpan="2147483647">
+                <HBox alignment="BOTTOM_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.columnSpan="2147483647">
                     <children>
-                        <Button fx:id="EditItemButton" mnemonicParsing="false" onAction="#EditItemButtonClicked" prefHeight="25.0" prefWidth="80.0" text="Edit Item" HBox.hgrow="NEVER" />
+                        <Button mnemonicParsing="false" onAction="#editItemButtonClicked" prefHeight="25.0" prefWidth="80.0" text="Edit Item" HBox.hgrow="NEVER" />
                     </children>
                 </HBox>
-                <TreeTableView fx:id="ListTreeTable" minHeight="30.0" minWidth="159.0" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
+                <TreeTableView fx:id="listTreeTable" minHeight="30.0" minWidth="159.0" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
                     <columns>
-                        <TreeTableColumn fx:id="DoneColumn" text="Done" />
-                        <TreeTableColumn fx:id="DescriptionColumn" text="Description" />
-                        <TreeTableColumn fx:id="DateColumn" prefWidth="85.0" text="Date" />
+                        <TreeTableColumn fx:id="doneColumn" text="Done" />
+                        <TreeTableColumn fx:id="descriptionColumn" text="Description" />
+                        <TreeTableColumn fx:id="dateColumn" prefWidth="85.0" text="Date" />
                     </columns>
                     <columnResizePolicy>
                         <TreeTableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                     </columnResizePolicy>
                 </TreeTableView>
-                <HBox fx:id="RightBottomHBox" alignment="TOP_RIGHT" fillHeight="false" prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="2">
+                <HBox alignment="TOP_RIGHT" fillHeight="false" prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="2">
                     <children>
-                        <Button fx:id="AddItemButton" mnemonicParsing="false" onAction="#addItemButtonClicked" text="Add Item" />
-                        <Button fx:id="RemoveItemButton" mnemonicParsing="false" onAction="#removeItemButtonClicked" text="Remove Item" />
+                        <Button mnemonicParsing="false" onAction="#addItemButtonClicked" text="Add Item" />
+                        <Button mnemonicParsing="false" onAction="#removeItemButtonClicked" text="Remove Item" />
                     </children>
                 </HBox>
             </children>
