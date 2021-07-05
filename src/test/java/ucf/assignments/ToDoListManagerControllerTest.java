@@ -54,7 +54,11 @@ class ToDoListManagerControllerTest {
 
     @Test
     void can_edit_list_item_description() {
-
+        //initialize ToDoListModel
+        //populate toDoListGroup with one ToDoList
+        //populate ToDoList with one ToDoListItem
+        //call updateDescription using expected String
+        //assert ToDoListItem has expected String as description
     }
 
     @Test

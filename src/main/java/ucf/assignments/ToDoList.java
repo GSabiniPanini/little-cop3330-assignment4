@@ -35,4 +35,8 @@ public class ToDoList {
         //remove li from ToDoList
     }
 
+    public void editItem(ToDoListItem li, String s1, String s2) {
+        //call ToDoListItem.updateItem using li, s1, and s2
+    }
+
 }

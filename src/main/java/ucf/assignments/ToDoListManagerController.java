@@ -72,7 +72,7 @@ public class ToDoListManagerController {
 
     @FXML
     void editItemButtonClicked(ActionEvent event) {
-
+        //call editItem
     }
 
     @FXML

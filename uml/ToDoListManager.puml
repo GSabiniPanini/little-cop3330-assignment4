@@ -43,7 +43,8 @@ class ToDoListModel {
     - addItemToList(ToDoList, String, String): void
     + removeItem(): void
     - removeItemFromList(ToDoList, ToDoListItem): void
-    + editItem(ToDoListItem): void
+    + editItem(): void
+    - editItemValues(ToDoList, ToDoListItem, String, String): void
     + sort(): void
 
     + updateViews(): void
@@ -72,7 +73,7 @@ class ToDoList {
 
     + addItem(String, String): void
     + removeItem(ToDoListItem): void
-    + editItem(ToDoList): void
+    + editItem(ToDoListItem, String, String): void
 
     + sortItemList(ToDoListCollection): void
     + save(ToDoList):void
@@ -87,9 +88,11 @@ class ToDoListItem {
 
     <<constructor>> ToDoListItem (String, String)
 
-    + updateDate(String): void
+    + updateItem(String, String): void
     + updateDescription(String): void
+    + updateDate(String): void
     + toggleComplete(): void
+
     + getDescription(): String
     + getDate(): String
     + toString(): String

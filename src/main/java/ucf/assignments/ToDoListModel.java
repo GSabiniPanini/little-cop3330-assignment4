@@ -72,6 +72,18 @@ public class ToDoListModel {
         //call ToDoList.removeItem using l and li
     }
 
+    public void editItem() {
+        //check to see if a ToDoListItem is selected
+            //bring up edit popup window that displays ToDoListItem variables in editable fields loaded with existing data
+            //call editItemValues using selected ToDoList and ToDoListItem, use two strings from edit window as params
+            //call updateViews
+        //if not do nothing
+    }
+
+    private void editItemValues(ToDoList l, ToDoListItem li, String s1, String s2) {
+        //call ToDoList.editItem using l, li, s1, and s2
+    }
+
     private void updateTable(ToDoList l) {
         //set toDoListView to l
     }
