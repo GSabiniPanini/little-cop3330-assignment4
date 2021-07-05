@@ -11,31 +11,42 @@ class ToDoListManagerController {
 }
 
 class ToDoListModel {
-    collections: Collection<ToDoListCollection>
+    toDoListGroup : Collection<ToDoList>
 
-    + addItem(ToDoListCollection, String, String): void
-    + removeItem(ToDoListCollection, ToDoList): void
-    + editItem(ToDoList): void
+    + addItem(ToDoList, String, String): void
+    + removeItem(ToDoList, ToDoListItem): void
+    + editItem(ToDoListItem): void
+
+    + save(): void
+    + saveAll(Collection<ToDoList>): void
+    + load(File): void
+    + loadCollection(File): void
+
+    + showAll(): void
+    + showDone(): void
+    + showNotDone(): void
     + sort(ToDoListCollection): void
 }
 
-class ToDoListCollection {
+class ToDoList {
     - title: String
-    - lists: Collection<ToDoList>
+    - list: Collection<ToDoListItem>
 
     - addItem(ToDoListCollection, String, String): void
     - removeItem(ToDoListCollection, ToDoList): void
     - editItem(ToDoList): void
     - sort(ToDoListCollection): void
+    - save(ToDoList):void
+
     - toString(): String
 }
 
-class ToDoList {
+class ToDoListItem {
     - date: String
     - description: String
     - complete: boolean
 
-    <<constructor>> ToDoList (String, String)
+    <<constructor>> ToDoListItem (String, String)
 
     - updateDate(String): void
     - updateDescription(String): void
@@ -48,7 +59,7 @@ class ToDoList {
 javafx.Application <|-- ToDoListManager
 ToDoListManager -- ToDoListManagerController
 ToDoListManagerController *--> ToDoListModel
-ToDoListModel *-> ToDoListCollection
-ToDoListCollection *-> ToDoList
+ToDoListModel *-> ToDoList
+ToDoList *-> ToDoListItem
 
 @enduml

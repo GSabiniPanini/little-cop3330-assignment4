@@ -25,4 +25,6 @@ javafx {
     modules = [ 'javafx.controls', 'javafx.fxml' ]
 }
 
-mainClassName = 'ucf.assignments.ToDoListManager'
+application {
+    mainClassName = 'ucf.assignments.ToDoListManager'
+}
