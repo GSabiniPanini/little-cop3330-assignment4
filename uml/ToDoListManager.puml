@@ -7,17 +7,17 @@ class ToDoListManager {
 }
 
 class ToDoListManagerController {
-    model: ToDoListModel
-    toDoListView: ListView<ToDoList>
-    listTreeTable: TreeTableView<ToDoListItem>
+    + model: ToDoListModel
+    + toDoListView: ListView<ToDoList>
+    + listTreeTable: TreeTableView<ToDoListItem>
 
     - addListButtonClicked(): void
     - removeListButtonClicked(): void
     - renameListButtonClicked(): void
 
-    - editItemButtonClicked(): void
     - addItemButtonClicked(): void
     - removeItemButtonClicked(): void
+    - editItemButtonClicked(): void
 
     - showAllFilterClicked(): void
     - showDoneFilterClicked(): void
@@ -30,20 +30,29 @@ class ToDoListManagerController {
 }
 
 class ToDoListModel {
-    toDoListGroup : Collection<ToDoList>
+    - toDoListGroup : Collection<ToDoList>
 
-    + addList
+    + addList(): void
+    - appendList(String): void
+    + removeList(): void
+    - removeObjectFromList(ToDoList): void
+    + renameList(): void
+    - changeListName(ToDoList, String): void
 
-    + addItem(ToDoList, String, String): void
+    + addItem(): void
+    - addItemToList(ToDoList, String, String): void
     + removeItem(ToDoList, ToDoListItem): void
     + editItem(ToDoListItem): void
+    + sort(): void
 
     + updateViews(): void
+    - updateTable(ToDoList): void
+    - updateList(Collection<ToDoList>): void
 
     + save(): void
-    + saveAll(Collection<ToDoList>): void
-    + load(File): void
-    + loadCollection(File): void
+    + saveAll(): void
+    + load(): void
+    + loadCollection(): void
 
     + showAll(): void
     + showDone(): void
@@ -55,18 +64,24 @@ class ToDoList {
     - title: SimpleStringProperty
     - list: Collection<ToDoListItem>
 
-    - addItem(ToDoListCollection, String, String): void
-    - removeItem(ToDoListCollection, ToDoList): void
-    - editItem(ToDoList): void
-    - sort(ToDoListCollection): void
-    - save(ToDoList):void
+    <<constructor>> ToDoList(String)
 
-    - toString(): String
+    + getTitle(): String
+    + setTitle(String): void
+
+    + addItem(String, String): void
+    + removeItem(ToDoListCollection, ToDoList): void
+    + editItem(ToDoList): void
+
+    + sortItemList(ToDoListCollection): void
+    + save(ToDoList):void
+
+    + toString(): String
 }
 
 class ToDoListItem {
-    - date: LocalDate
     - description: SimpleStringProperty
+    - date: LocalDate
     - complete: boolean
 
     <<constructor>> ToDoListItem (String, String)

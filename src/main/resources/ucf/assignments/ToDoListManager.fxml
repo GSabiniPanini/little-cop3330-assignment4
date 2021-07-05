@@ -35,7 +35,7 @@
                 </Menu>
                 <Menu fx:id="filterMenu" mnemonicParsing="false" text="Filter">
                     <items>
-                        <RadioMenuItem fx:id="showAllFilter" mnemonicParsing="false" onAction="#showAllFilterClicked" text="Show All">
+                        <RadioMenuItem fx:id="showAllFilter" mnemonicParsing="false" onAction="#showAllFilterClicked" selected="true" text="Show All">
                             <toggleGroup>
                                 <ToggleGroup fx:id="filterToggleGroup" />
                             </toggleGroup>
@@ -95,6 +95,7 @@
             <children>
                 <HBox alignment="BOTTOM_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.columnSpan="2147483647">
                     <children>
+                  <Button mnemonicParsing="false" onAction="#sortButtonClicked" text="Sort" />
                         <Button mnemonicParsing="false" onAction="#editItemButtonClicked" prefHeight="25.0" prefWidth="80.0" text="Edit Item" HBox.hgrow="NEVER" />
                     </children>
                 </HBox>

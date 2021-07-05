@@ -47,21 +47,21 @@ public class ToDoListManagerController {
 
     @FXML
     void addListButtonClicked(ActionEvent event) {
-        //
-    }
-
-    @FXML
-    void editItemButtonClicked(ActionEvent event) {
-
+        //call addList
     }
 
     @FXML
     void removeListButtonClicked(ActionEvent event) {
-
+        //call removeList
     }
 
     @FXML
     void renameListButtonClicked(ActionEvent event) {
+        //call renameList
+    }
+
+    @FXML
+    void editItemButtonClicked(ActionEvent event) {
 
     }
 
@@ -91,23 +91,28 @@ public class ToDoListManagerController {
     }
 
     @FXML
-    void menuLoadCollectionClicked(ActionEvent event) {
-
-    }
-
-    @FXML
-    void menuLoadListClicked(ActionEvent event) {
-
+    void menuSaveListClicked(ActionEvent event) {
+        //call save
     }
 
     @FXML
     void menuSaveAllClicked(ActionEvent event) {
-
+        //call saveAll
     }
 
     @FXML
-    void menuSaveListClicked(ActionEvent event) {
+    void menuLoadListClicked(ActionEvent event) {
+        //call load
+    }
 
+    @FXML
+    void menuLoadCollectionClicked(ActionEvent event) {
+        //call loadCollection
+    }
+
+    @FXML
+    void sortButtonClicked(ActionEvent event) {
+        //call sort
     }
 
 }

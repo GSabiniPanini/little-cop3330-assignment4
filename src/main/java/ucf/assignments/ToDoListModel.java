@@ -5,5 +5,67 @@
 
 package ucf.assignments;
 
+import java.util.Collection;
+
 public class ToDoListModel {
+    private Collection<ToDoList> toDoListGroup;
+
+    public void addList() {
+        //bring up popup window with string input box
+        //call appendList with string
+        //call updateViews
+    }
+
+    private void appendList(String s) {
+        //add ToDoList object with title s to toDoListGroup
+    }
+
+    public void updateViews() {
+        //call updateTable with selected ToDoList
+        //call updateList with current Collection<ToDoList>
+    }
+
+    public void removeList() {
+        //check to see if a ToDoList is selected
+            //bring up alert confirmation dialog
+            //call removeObjectFromList with selected ToDoList
+            //call updateViews
+        //if not do nothing
+    }
+
+    private void removeObjectFromList(ToDoList l) {
+        //remove ToDoList object l from  toDoListGroup
+    }
+
+    public void renameList() {
+        //check to see if a ToDoList is selected
+            //bring up popup window with string input box
+            //call changeListName with selected ToDoList and returned string
+            //call updateViews
+        //if not do nothing
+    }
+
+    private void changeListName(ToDoList l, String s) {
+        //call ToDoList.setTitle using l and s
+    }
+
+    public void addItem() {
+        //check to see if a ToDoList is selected
+            //bring up popup window with two string input boxes for desc and date
+            //call addItemToList with selected ToDoList and the two returned strings
+            //call updateViews
+        //if not do nothing
+    }
+
+    private void addItemToList(ToDoList l, String s1, String s2) {
+        //call ToDoList.addItem using l, s1, and s2
+    }
+
+    private void updateTable(ToDoList l) {
+        //set toDoListView to l
+    }
+
+    private void updateList(Collection<ToDoList> c) {
+        //set listTreeTable to c
+    }
 }

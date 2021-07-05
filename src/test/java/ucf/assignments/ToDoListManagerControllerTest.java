@@ -13,20 +13,34 @@ class ToDoListManagerControllerTest {
 
     @Test
     void can_add_new_list() {
-        //make a new ToDoListModel
-        //
+        //initialize ToDoList Model
+        //create empty toDoListGroup
+        //call appendList with expected title string
+        //assert toDoListGroup collection has ToDoList with expected title
     }
 
     @Test
     void can_remove_list() {
+        //initialize ToDoList Model
+        //create toDoListGroup populated with some number of ToDoList
+        //call removeObjectFromList with one of the ToDoList objects
+        //assert toDoListGroup collection properly removed the object
     }
 
     @Test
     void can_rename_list() {
+        //initialize ToDoList Model
+        //create toDoListGroup populated with one ToDoList
+        //call changeListName using the just created ToDoList and an expected title
+        //assert toDoListGroup has only one ToDoList with expected title
     }
 
     @Test
     void can_add_list_item() {
+        //initialize ToDoListModel
+        //populate toDoListGroup with one ToDoList
+        //call addItemToList with created ToDoList and two expected strings
+        //assert toDoList has ToDoListItem with expected strings
     }
 
     @Test
