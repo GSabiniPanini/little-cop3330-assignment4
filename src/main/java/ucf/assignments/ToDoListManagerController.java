@@ -82,17 +82,22 @@ public class ToDoListManagerController {
 
     @FXML
     void showAllFilterClicked(ActionEvent event) {
-
+        //call updateFilter
     }
 
     @FXML
     void showDoneFilterClicked(ActionEvent event) {
-
+        //call updateFilter
     }
 
     @FXML
     void showNotDoneFilterClicked(ActionEvent event) {
+        //call updateFilter
+    }
 
+    @FXML
+    void sortButtonClicked(ActionEvent event) {
+        //call sort
     }
 
     @FXML
@@ -113,11 +118,6 @@ public class ToDoListManagerController {
     @FXML
     void menuLoadCollectionClicked(ActionEvent event) {
         //call loadCollection
-    }
-
-    @FXML
-    void sortButtonClicked(ActionEvent event) {
-        //call sort
     }
 
 }

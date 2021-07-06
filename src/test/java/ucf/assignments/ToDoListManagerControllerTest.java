@@ -80,15 +80,28 @@ class ToDoListManagerControllerTest {
     }
 
     @Test
-    void can_show_all_list_items_in_a_list() {
+    void can_change_filter_to_SHOWALL() {
+        //initialize ToDoListModel
+        //call changeFilter with SHOWALL
+        //assert that ToDoListModel.filter is equal to Filter.SHOWALL
     }
 
     @Test
-    void can_show_only_unfinished_list_items_in_a_list() {
+    void can_change_filter_to_SHOWNOTDONE() {
+        //initialize ToDoListModel
+        //call changeFilter with SHOWNOTDONE
+        //assert that ToDoListModel.filter is equal to Filter.SHOWNOTDONE
     }
 
     @Test
-    void can_show_only_finished_list_items_in_a_list() {
+    void can_change_filter_to_SHOWDONE() {
+        //initialize ToDoListModel
+        //call changeFilter with SHOWDONE
+        //assert that ToDoListModel.filter is equal to Filter.SHOWDONE
+    }
+
+    @Test
+    void can_sort_ToDoList() {
     }
 
     @Test
@@ -106,6 +119,7 @@ class ToDoListManagerControllerTest {
     @Test
     void can_append_multiple_external_lists_to_current_gui() {
     }
+
 
 
 

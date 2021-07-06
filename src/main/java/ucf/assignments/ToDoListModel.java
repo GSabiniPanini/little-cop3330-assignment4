@@ -5,10 +5,24 @@
 
 package ucf.assignments;
 
+import javafx.beans.property.Property;
+
 import java.util.Collection;
+
+enum Filter {
+    SHOWALL,
+    SHOWNOTDONE,
+    SHOWDONE
+}
 
 public class ToDoListModel {
     private Collection<ToDoList> toDoListGroup;
+    public Filter filter;
+
+    public ToDoListModel() {
+        //set filter to selectedToggleGroup
+        //initialize toDoListGroup
+    }
 
     public void addList() {
         //bring up popup window with string input box
@@ -18,11 +32,6 @@ public class ToDoListModel {
 
     private void appendList(String s) {
         //add ToDoList object with title s to toDoListGroup
-    }
-
-    public void updateViews() {
-        //call updateTable with selected ToDoList
-        //call updateList with current Collection<ToDoList>
     }
 
     public void removeList() {
@@ -93,6 +102,24 @@ public class ToDoListModel {
 
     private void completeTogglePass(ToDoList l, ToDoListItem li) {
         //call ToDoList.ToDoListItem.toggleComplete using l and li
+    }
+
+    public void updateViews() {
+        //call updateFilter
+        //call updateTable with selected ToDoList
+        //call updateList with current Collection<ToDoList>
+    }
+
+    public void updateFilter() {
+        //change the filter variable to match the selected filter
+        //call changeFilter with selectedToggleGroup Property
+    }
+
+    private void changeFilter(Property p) {
+        //switch(p)
+            //showall: set filter to SHOWALL
+            //shownotdone: set filter to SHOWNOTDONE
+            //showdone: set filter to SHOWDONE
     }
 
     private void updateTable(ToDoList l) {

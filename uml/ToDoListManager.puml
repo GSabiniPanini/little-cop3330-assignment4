@@ -6,6 +6,12 @@ class ToDoListManager {
     start()
 }
 
+enum Filter {
+    SHOWALL
+    SHOWDONE
+    SHOWNOTDONE
+}
+
 class ToDoListManagerController {
     + model: ToDoListModel
     + toDoListView: ListView<ToDoList>
@@ -33,6 +39,9 @@ class ToDoListManagerController {
 
 class ToDoListModel {
     - toDoListGroup : Collection<ToDoList>
+    + filter: enum Filter
+
+    <<constructor>> ToDoListModel()
 
     + addList(): void
     - appendList(String): void
@@ -50,7 +59,11 @@ class ToDoListModel {
     + completeToggle(): void
     - completeTogglePass(ToDoList, ToDoListItem): void
 
+    + sort(ToDoListCollection): void
+
     + updateViews(): void
+    + updateFilter(): void
+    - changeFilter(Property): void
     - updateTable(ToDoList): void
     - updateList(Collection<ToDoList>): void
 
@@ -58,11 +71,6 @@ class ToDoListModel {
     + saveAll(): void
     + load(): void
     + loadCollection(): void
-
-    + showAll(): void
-    + showDone(): void
-    + showNotDone(): void
-    + sort(ToDoListCollection): void
 }
 
 class ToDoList {
