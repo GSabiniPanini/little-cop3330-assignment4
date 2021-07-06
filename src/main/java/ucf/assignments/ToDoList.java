@@ -39,4 +39,16 @@ public class ToDoList {
         //call ToDoListItem.updateItem using li, s1, and s2
     }
 
+    public void sortItemList() {
+        //call Collection.sort on list to sort ToDoListItems by date
+    }
+
+    public String toString() {
+        String string = "";
+        //Iterate through list collection
+            //append toStrings of ToDoListItems to string
+            //append \n after each ToDoListItem
+        return string;
+    }
+
 }

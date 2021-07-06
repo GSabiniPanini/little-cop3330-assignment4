@@ -39,5 +39,9 @@ public class ToDoListItem {
         //else set complete to true
     }
 
-
+    public String toString() {
+        String string = "";
+        //append description and date to string using a particular format
+        return string;
+    }
 }

@@ -70,6 +70,7 @@ class ToDoListModel {
 
     + save(): void
     + saveAll(): void
+    - getBigString(): void
     + load(): void
     + loadCollection(): void
 }
@@ -88,7 +89,6 @@ class ToDoList {
     + editItem(ToDoListItem, String, String): void
 
     + sortItemList(ToDoListCollection): void
-    + save(ToDoList):void
 
     + toString(): String
 }

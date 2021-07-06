@@ -106,13 +106,9 @@ public class ToDoListModel {
 
     public void sort() {
         //check to see if a ToDoList is selected
-            //call sortList with the selected ToDoList
+            //call sortItemList with the selected ToDoList
             //call updateViews
         //if not then do nothing
-    }
-
-    private void sortList(ToDoList l) {
-        //call Collection.sort with l to sort ToDoList by date
     }
 
     public void updateViews() {
@@ -139,5 +135,37 @@ public class ToDoListModel {
 
     private void updateList(Collection<ToDoList> c) {
         //set listTreeTable to c
+    }
+
+    public void save() {
+        //bring up popup to ask for which ToDoList to save
+        //ask for String to name the file
+        //overwrite or create file
+        //print selected ToDoList's toString to file
+        //close file
+    }
+
+    public void saveAll() {
+        //bring up popup to ask for file name
+        //overwrite or create file
+        //call getBigString to get compiled string
+        //print string to file
+        //close file
+    }
+
+    private String getBigString() {
+        String string = "";
+        //iterate through toDoListGroup
+            //append ToDoList toStrings to string
+            //append \n after each ToDoList
+        return string;
+    }
+
+    public void load() {
+
+    }
+
+    public void loadCollection() {
+
     }
 }

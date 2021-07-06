@@ -105,12 +105,17 @@ class ToDoListManagerControllerTest {
         //initialize ToDoListModel
         //populate toDoListGroup with one ToDoList
         //populate ToDoList with at least two ToDoListItems
-        //call sort using created ToDoList
+        //call sortItemList using created ToDoList
         //assert that ToDoList now has a sorted list of ToDoListItems
     }
 
     @Test
-    void can_save_list_to_file() {
+    void can_create_string_for_save_list_to_file() {
+        //initialize ToDoListModel
+        //populate toDoListGroup with one ToDoList
+        //populate ToDoList with at least one ToDoListItem
+        //call ToDoList.toString to get the printable string
+        //assert printable string is equal to the expected string
     }
 
     @Test
