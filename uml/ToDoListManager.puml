@@ -73,6 +73,8 @@ class ToDoListModel {
     - getBigString(): void
     + load(): void
     + loadCollection(): void
+    + addCollection(Collection<ToDoList>, Collection<ToDoList>): Collection<ToDoList>
+    - parseFileCollection(File): Collection<ToDoList>
 }
 
 class ToDoList {

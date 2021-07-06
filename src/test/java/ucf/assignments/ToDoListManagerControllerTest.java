@@ -128,11 +128,15 @@ class ToDoListManagerControllerTest {
     }
 
     @Test
-    void can_append_external_list_to_current_gui() {
+    void can_append_external_collection_to_current_collection() {
     }
 
     @Test
-    void can_append_multiple_external_lists_to_current_gui() {
+    void can_append_multiple_collections_to_current_collection() {
+        //initialize ToDoListModel
+        //create Collection<ToDoList> test and populate it with at least one ToDoList
+        //call addCollection using toDoListGroup and test
+        //assert that toDoListGroup now contains every element from test Collection
     }
 
 

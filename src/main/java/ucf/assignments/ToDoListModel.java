@@ -7,6 +7,7 @@ package ucf.assignments;
 
 import javafx.beans.property.Property;
 
+import java.io.File;
 import java.util.Collection;
 
 enum Filter {
@@ -162,10 +163,34 @@ public class ToDoListModel {
     }
 
     public void load() {
-
+        //bring up popup to ask for a filename
+        //search for file
+        //if found
+            //
+        //else do nothing
     }
 
     public void loadCollection() {
-
+        //bring up popup to ask for a filename
+        //search for file
+        //if found
+            //call parseFileCollection using file to get a parsed collection
+            //close file
+            //call addCollection using parsedCollection and toDoListGroup to add parsed Collection to toDoListGroup
+        //else do nothing
     }
+
+    public Collection<ToDoList> addCollection(Collection<ToDoList> c1, Collection<ToDoList> c2) {
+        Collection<ToDoList> temp = null;
+        //set temp to c1.add(c2)
+        return temp;
+    }
+    
+    private Collection<ToDoList> parseFileCollection(File file) {
+        Collection<ToDoList> temp = null;
+        //have a parsing method here to create ToDoList objects with every line of file
+        //store each object into temp collection
+        return temp;
+    }
+    
 }
