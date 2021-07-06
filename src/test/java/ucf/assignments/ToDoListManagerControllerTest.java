@@ -129,6 +129,10 @@ class ToDoListManagerControllerTest {
 
     @Test
     void can_append_external_collection_to_current_collection() {
+        //initialize ToDoListModel
+        //create ToDoList test and populate it with any number of ToDoListItems
+        //call addList using the test Object to add the test ToDoList to the toDoListGroup
+        //assert that toDoListGroup now contains every element from the test ToDoList
     }
 
     @Test

@@ -166,8 +166,17 @@ public class ToDoListModel {
         //bring up popup to ask for a filename
         //search for file
         //if found
-            //
+            //call parseFile using file to get a ToDoList
+            //close file
+            //call addList to add ToDoList object to toDoListGroup
         //else do nothing
+    }
+
+    private ToDoList parseFile(File file) {
+        ToDoList obj = null;
+        //have a parsing method here to create a ToDoList object out of the line of text in the file
+        //store the ToDoList in obj
+        return obj;
     }
 
     public void loadCollection() {

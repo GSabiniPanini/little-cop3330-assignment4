@@ -71,7 +71,9 @@ class ToDoListModel {
     + save(): void
     + saveAll(): void
     - getBigString(): void
+
     + load(): void
+    - parseFile(File): ToDoList
     + loadCollection(): void
     + addCollection(Collection<ToDoList>, Collection<ToDoList>): Collection<ToDoList>
     - parseFileCollection(File): Collection<ToDoList>
