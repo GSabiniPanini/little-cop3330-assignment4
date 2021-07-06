@@ -102,6 +102,11 @@ class ToDoListManagerControllerTest {
 
     @Test
     void can_sort_ToDoList() {
+        //initialize ToDoListModel
+        //populate toDoListGroup with one ToDoList
+        //populate ToDoList with at least two ToDoListItems
+        //call sort using created ToDoList
+        //assert that ToDoList now has a sorted list of ToDoListItems
     }
 
     @Test

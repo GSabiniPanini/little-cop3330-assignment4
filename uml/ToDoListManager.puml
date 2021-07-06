@@ -59,7 +59,8 @@ class ToDoListModel {
     + completeToggle(): void
     - completeTogglePass(ToDoList, ToDoListItem): void
 
-    + sort(ToDoListCollection): void
+    + sort(): void
+    - sortList(ToDoList): void
 
     + updateViews(): void
     + updateFilter(): void

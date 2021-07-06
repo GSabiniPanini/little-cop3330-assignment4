@@ -104,6 +104,17 @@ public class ToDoListModel {
         //call ToDoList.ToDoListItem.toggleComplete using l and li
     }
 
+    public void sort() {
+        //check to see if a ToDoList is selected
+            //call sortList with the selected ToDoList
+            //call updateViews
+        //if not then do nothing
+    }
+
+    private void sortList(ToDoList l) {
+        //call Collection.sort with l to sort ToDoList by date
+    }
+
     public void updateViews() {
         //call updateFilter
         //call updateTable with selected ToDoList
