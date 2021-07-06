@@ -39,6 +39,18 @@ public class ToDoListItem {
         //else set complete to true
     }
 
+    public String getDescription() {
+        String s = null;
+        //set s to description
+        return s;
+    }
+
+    public String getDate() {
+        String s = null;
+        //set s to date
+        return s;
+    }
+
     public String toString() {
         String string = "";
         //append description and date to string using a particular format
