@@ -119,7 +119,12 @@ class ToDoListManagerControllerTest {
     }
 
     @Test
-    void can_save_all_lists_to_file() {
+    void can_create_bigString_for_save_all_lists_to_file() {
+        //initialize ToDoListModel
+        //populate toDoListGroup with at least one ToDoList
+        //populate ToDoList with at least one ToDoListItem
+        //call getBigString to get the big printable string
+        //assert big printable string is equal to the expected string
     }
 
     @Test
